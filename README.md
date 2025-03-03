@@ -73,5 +73,5 @@ https://api.openweathermap.org/data/2.5/weather?q=London&units=imperial&appid=yo
 
 
 ## Author
-[Your Name](https://github.com/mnesh01)
+[Kiagu](https://github.com/mnesh01)
 
