@@ -26,16 +26,10 @@ app.get("/weather", async (req, res) => {
    } catch (error) {
     weather = null;
     error = "Error please try again";
-    
    }
-
-
-
+   res.render("index", {weather, error});
 
 });
-
-
-
 
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
