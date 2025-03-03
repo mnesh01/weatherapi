@@ -14,9 +14,25 @@
             placeholder="Enter the name of the city">
             <button type="submit">Get weather</button>
         </form>
-
-
-
+         <% if (error) { %>
+            <p class="error"><%= error %></p>
+            <% } else if (weather) { %>
+            <div class="card">
+              <p>
+                <i class="fas fa-thermometer-half"></i>
+                <%=weather.main.temp%>&deg;F
+              </p>
+              <p>
+                <i class="fas fa-cloud"></i>
+                <%=weather.weather[0].main%>
+              </p>
+      
+              <p>
+                <i class="fas fa-map-marker-alt"></i>
+                <%=weather.name%>, <%=weather.sys.country%>
+              </p>
+            </div>
+            <% } %>
     </div>
 </body>
 </html>
