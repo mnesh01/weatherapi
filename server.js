@@ -13,7 +13,24 @@ app.get("/", (req, res) => {
 app.get("/weather", async (req, res) => {
 
   const city = req.query.city;
-  const apiKey = "";
+  const apiKey = "b6a1155905ea0d4196d0e2dd9b542d3a";
+
+   // Add your logic here to fetch weather data from the API
+   const APIurl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
+
+   let weather;
+   let error = null;
+   try {
+    const response = await  axios.get(APIurl)
+    weather = response.data;
+   } catch (error) {
+    weather = null;
+    error = "Error please try again";
+    
+   }
+
+
+
 
 });
 
